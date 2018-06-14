@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <head>
+        <title>Display Details</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <h:form>
+            <p>Application ID,#{login.user.applicationToSearch}</p>
+            <h:dataTable id="data" rows="#{login.user.showDetails().size()}"
+                         value="#{login.user.showDetails()}" var="str" border="1">
+                <h:column>
+                    <f:facet name="header"> Passport Number</f:facet>
+                    <h:outputText id="str1" value="#{str.passportNumber}"></h:outputText>
+                </h:column>
+                <h:column>
+                    <f:facet name="header"> Type of visa</f:facet>
+                    <h:outputText id="str2" value="#{str.type}"></h:outputText>
+                </h:column>
+                <h:column>
+                    <f:facet name="header"> Field of study</f:facet>
+                    <h:outputText id="str3" value="#{str.field}"></h:outputText>
+                </h:column>
+                <h:column>
+                    <f:facet name="header"> Date of application</f:facet>
+                    <h:outputText id="str4" value="#{str.time}"></h:outputText>
+                </h:column>
+                <h:column>
+                    <f:facet name="header" > Status of visa</f:facet>
+                    <h:outputText id="str5" value="#{str.stat}"></h:outputText>
+                </h:column>
+            </h:dataTable>
+        </h:form>
+    </body>
+</html>

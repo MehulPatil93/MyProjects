@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <head>
+        <title>Search Application</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <h:form>
+            <p>Select the application to be displayed <h:selectOneMenu id="val" value="#{login.user.applicationToSearch}">
+                    <f:selectItems id="menu" value="#{login.user.search()}" ></f:selectItems>
+                </h:selectOneMenu>
+                <h:commandButton id="go" action="displaydetails.xhtml" value="GO"></h:commandButton>
+            </p>
+            <p><h:commandButton id="return" action="welcome.xhtml" value="RETURN"></h:commandButton></p>
+        </h:form>
+    </body>
+</html>

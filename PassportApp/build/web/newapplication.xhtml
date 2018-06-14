@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <head>
+        <title>New Application</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <h:form>
+            <p>Choose the Nation 
+            
+                <h:selectOneRadio id="nationality" value="#{login.user.nation}">
+                    <f:selectItem id="chn" itemValue="CHN" itemLabel="-CHINA"></f:selectItem>
+                    <f:selectItem id="ind" itemValue="IND" itemLabel="-INDIA"></f:selectItem>
+                    <f:selectItem id="ven" itemValue="VEN" itemLabel="-VEN"></f:selectItem>
+                </h:selectOneRadio>
+            </p>
+            <p>Enter the passport Number <h:inputText id="passportnumnber" value="#{login.user.passportNumber}" required="true"></h:inputText></p>
+            <p>Choose the Type
+                <h:selectOneRadio id="type" value="#{login.user.type}">
+                    <f:selectItem id="F1" itemValue="F1" itemLabel="F1"></f:selectItem>
+                    <f:selectItem id="F2" itemValue="F2" itemLabel="F2"></f:selectItem>
+                </h:selectOneRadio>
+            </p>
+            <p>
+                <h:selectOneRadio id="field" value="#{login.user.field}">
+                    <f:selectItem id="bus" itemValue="BUS" itemLabel="BUS"></f:selectItem>
+                    <f:selectItem id="sci" itemValue="SCI" itemLabel="SCI"></f:selectItem>
+                </h:selectOneRadio>
+            </p>
+            <p>Enter the time in MMM-YYYY <h:inputText id="time" value="#{login.user.time}"></h:inputText></p>
+            <p>Enter the spouse passport number if not enter none <h:inputText id="spouse" value="#{login.user.spousePassportNumber}"></h:inputText></p>
+        
+            <br></br>
+            <p><h:commandButton id="submit" value="SUBMIT" action="visaConfirmation.xhtml"></h:commandButton></p>
+                
+             
+        </h:form>
+    </body>
+</html>
