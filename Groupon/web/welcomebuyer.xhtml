@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <head>
+        <title>welcome</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <h:form>
+            <h2> Welcome #{buyerlogin.username} </h2>
+            <p>
+            Press view to see products/services for sale<br/>
+            <h:commandButton id="view" value="View" action="viewproduct.xhtml"/></p>
+            <p>
+            Press history to see previous transactions<br/>
+            <h:commandButton id="history" value="history" action="showhistory.xhtml"/></p>
+            
+            <h:inputText id="title" value="#{buyerlogin.buyerdetail.key}"/>
+            <h:commandButton id="search" value="Search" action="search.xhtml"/>
+            <p> <h:commandButton id="logout" value="Logout" action="index.xhtml"/> </p>
+        </h:form>
+    </body>
+</html>

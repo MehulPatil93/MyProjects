@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <head>
+        <title>Buyer Login</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <h:form>
+            <h3>Welcome to Buyer Login</h3>
+            <p>Enter your username<br/>
+                <h:inputText id="uname" validatorMessage="Cannot be empty" value="#{buyerlogin.username}"/></p>
+                    <p> Enter your password<br/>
+                        <h:inputText id="pass" validatorMessage="cannot be empty" value="#{buyerlogin.password}"/></p>
+                            
+                        <p><h:commandButton id="submit" value="Submit" action="#{buyerlogin.buyerlogin()}"/></p>
+            
+        </h:form>
+    </body>
+</html>

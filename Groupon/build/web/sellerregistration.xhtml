@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:h="http://java.sun.com/jsf/html">
+    <head>
+        <title>Form</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <h:form>
+        <h3>Creating a new Buyer account</h3>
+        <p>Please Enter your user ID: <br></br>
+            <h:inputText id="buyname" requiredMessage="userid cannot be empty" value="#{createNewSeller.username}">
+            </h:inputText>
+        </p>
+        <p> Please Enter your password<br></br>
+            <h:inputText id="buypass" requiredMessage="password cannot be empty" value="#{createNewSeller.password}" 
+                         validatorMessage="Enter the correct password"> </h:inputText>
+        </p>
+        <p> <h:commandButton id="submit" value="Submit" action="confirmseller.xhtml"/>
+        </p>
+        </h:form>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <head>
+        <title>TODO supply a title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <h:form>
+            <h2>#{buyerlogin.buyerdetail.selecteditem}: </h2>
+            
+            <h:dataTable id="sellertable" rows="#{buyerlogin.buyerdetail.showSelectedItemDetails().size()}"
+                         value="#{buyerlogin.buyerdetail.showSelectedItemDetails()}" var="str">
+                <h:column>
+                    Product title:
+                    <h:outputText styleClass="dataTableOutputText" 
+                                  id="strvalue" value="#{str.title}"/> 
+                </h:column>
+                <h:column>
+                    Product Description:
+                    <h:outputText styleClass="dataTableOutputText" 
+                                  id="strvalue1" value="#{str.desc}"/> 
+                </h:column>
+                <h:column>
+                    Product Cost:
+                    <h:outputText styleClass="dataTableOutputText" 
+                                  id="strvalue2" value="#{str.cost}"/> 
+                </h:column>
+                <h:column>
+                    Product Quantity:
+                    <h:outputText styleClass="dataTableOutputText" 
+                                  id="strvalue3" value="#{str.quantity}"/> 
+                </h:column>
+            </h:dataTable><br/>
+            
+            <h:commandButton id="back" value="Back" action="viewproduct.xhtml"/>
+            <h:commandButton id="Buy" value="Buy" action="buyconfirm.xhtml"/>
+                
+                
+        </h:form>
+    </body>
+</html>
